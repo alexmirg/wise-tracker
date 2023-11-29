@@ -111,7 +111,9 @@ export const getEmailNotifType = (
 };
 
 export const formatNumber = (num: number = 0) => {
-  return num.toLocaleString(undefined, {
+  const number = num ? num : 0
+
+  return number.toLocaleString(undefined, {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   });
